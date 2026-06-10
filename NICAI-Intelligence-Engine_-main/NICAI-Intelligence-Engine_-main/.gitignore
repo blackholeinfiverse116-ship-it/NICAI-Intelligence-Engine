@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.env
+venv/
+.idea/
+.vscode/
+
+logs/*.json
+
+proof_assets/Demo_flow.mp4
+
+*.mp4
+final_Review_packets/demo_video.mp4
