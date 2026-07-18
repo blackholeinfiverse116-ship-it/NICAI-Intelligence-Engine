@@ -45,7 +45,15 @@ os.makedirs("logs", exist_ok=True)
 app = FastAPI(title="NICAI Intelligence Engine", version="5.0")
 templates = Jinja2Templates(directory="templates")
 
-
+@app.get("/")
+def home():
+    return {
+        "service": "NICAI Intelligence Engine",
+        "status": "Running",
+        "docs": "/docs",
+        "dashboard": "/dashboard",
+        "health": "/test"
+    }
 # -------------------------------------------------------
 # INTERNAL: Validation (real, not mocked)
 # Phase 1: old analyze_signal() fully bypassed — uses SanskarEngine via run_engine()
